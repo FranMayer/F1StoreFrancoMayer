@@ -14,6 +14,7 @@
 
 body {
     background-color: var(--primary-color);
+    font-family: miFuenteAdd;
 }
 
 .logo-img {
@@ -38,18 +39,17 @@ a:hover {
 /*MAIN SECTION*/
 
 .main-section {
-    margin-top: 40px;
+    margin-top: 30px;
     color: var(--secondary-color);
 }
 
 .article-section { 
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .card-main img {
-    width: 16rem;
+    width: 18rem;
     border-radius: 40px;
 }
 
@@ -59,7 +59,7 @@ a:hover {
     margin-top: 20px;
 }
 
-/* CSS */
+/* Botón*/
 
 .button-30 {
     align-items: center;

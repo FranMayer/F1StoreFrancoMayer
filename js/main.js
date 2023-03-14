@@ -1,4 +1,4 @@
-function consultarPrecios() {
+/*function consultarPrecios() {
   let continuar = true;
   
   while (continuar) {
@@ -73,4 +73,4 @@ function consultarPrecios() {
 }
 
 // Ejecutamos la función al cargar la página
-consultarPrecios();
+consultarPrecios();*/
