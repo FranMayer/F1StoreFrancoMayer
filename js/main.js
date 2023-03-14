@@ -74,3 +74,20 @@
 
 // Ejecutamos la función al cargar la página
 consultarPrecios();*/
+
+/*Funciones de orden superios */
+/*et abcdario = ["a", "b", "c", "d", "e", "f"]
+let frutas = ["Manzana", "Pera", "Uvas", "Bananas", "limon"]
+
+
+function listarElementos (array, log) {
+  for (elemento of array)
+      log(elemento)
+}*/
+
+
+function listarProductos() {
+  listarProductos.forEach(function(producto)=>{
+    console.log(producto)
+  })
+}
