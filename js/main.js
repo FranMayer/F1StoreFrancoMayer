@@ -84,10 +84,3 @@ function listarElementos (array, log) {
   for (elemento of array)
       log(elemento)
 }*/
-
-
-function listarProductos() {
-  listarProductos.forEach(function(producto)=>{
-    console.log(producto)
-  })
-}
