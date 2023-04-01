@@ -58,14 +58,14 @@ a:hover {
 }
 
 .card-main img {
-    width: 18rem;
+    width: 25rem;
     border-radius: 40px;
 }
 
 .card-main h3 {
     text-align: center;
     font-size: 15px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 
@@ -74,7 +74,7 @@ a:hover {
 
 .button-container {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .container-local {
@@ -141,4 +141,9 @@ a:hover {
     transform: translateX(-50%) translateY(-100%);
     opacity: 1;
     transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+.boton-final {
+    margin-top: 100px;
+    margin: 2px solid white;
 }

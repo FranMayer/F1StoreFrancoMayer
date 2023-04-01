@@ -15,35 +15,14 @@ const coches = [
 
 ];
 
-let cocheEncontrado = "";
+// 
 
-while (true) {
-  const idCoche = parseInt(prompt("Por favor ingrese el Id del modelo que desea buscar ingresando un dato del 001 al 012 correlativamente:"));
+let carrito = [];
 
-  cocheEncontrado = coches.find((coche) => coche.id === idCoche);
+const boton = document.getElementById("boton");
+boton.addEventListener("click", );
 
-  if (cocheEncontrado) {
-    if (cocheEncontrado.disponibilidad === "si") {
-      alert(`El modelo ${cocheEncontrado.nombre} está disponible y su precio es $ ${cocheEncontrado.precio} pesos👌`);
-    } else {
-      const buscarOtro = confirm(`El modelo ${cocheEncontrado.nombre} no está disponible en este momento😥 ¿Desea buscar otro modelo?`);
-      if (!buscarOtro) {
-        break; 
-      }
-    }
-  } else {
-    const buscarOtro = confirm("El Id del modelo introducido no es correcto ❌ ¿Desea buscar otro modelo?");
-    if (!buscarOtro) {
-      break; 
-    }
-  }
-}
 
-const cochesDisponibles = coches.filter((coche) => coche.disponibilidad === "si");
-
-if (cochesDisponibles.length > 0) {
-  const modelosCochesDisponibles = cochesDisponibles.map((coche) => coche.nombre);
-  alert(`Los modelos actualmente disponibles son:\n- ${modelosCochesDisponibles.join(", ")}`);
-} else {
-  alert("Actualmente no hay modelos disponibles en el inventario📍");
+function agregarAlCarrito() {
+  
 }
