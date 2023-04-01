@@ -147,3 +147,8 @@ a:hover {
     margin-top: 100px;
     margin: 2px solid white;
 }
+
+a {
+    text-decoration: none;
+    color: #14141c;
+}

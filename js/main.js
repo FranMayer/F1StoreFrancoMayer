@@ -15,14 +15,23 @@ const coches = [
 
 ];
 
-// 
-
+// variable para el carrito
 let carrito = [];
 
-const boton = document.getElementById("boton");
-boton.addEventListener("click", );
+//obetener datos de todos los botones de los productos
+const botones = document.querySelectorAll("#boton");
 
 
-function agregarAlCarrito() {
-  
+// Agregar un evento de clic a cada botón
+for (var i = 0; i < botones.length; i++) {
+  botones[i].addEventListener("click", function() {
+    // Obtener el objeto de producto correspondiente
+    var idProducto = this.getAttribute("data-id");
+    var producto = coches.find(function(item) {
+      return item.id === idProducto;
+    });
+
+    // Agregar el producto al carrito
+    agregarProductoAlCarrito(producto);
+  });
 }
