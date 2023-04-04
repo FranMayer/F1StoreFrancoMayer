@@ -1,4 +1,4 @@
-const coches = [
+  const coches = [
 
   {id: 001, nombre: "Footwork FA16", precio: 2750, disponibilidad: "no"},
   {id: 002, nombre: "Bennetton B139", precio: 2800, disponibilidad: "si"},
@@ -12,26 +12,10 @@ const coches = [
   {id: 010, nombre: "Mercedes Mclaren MP4/29", precio: 2700, disponibilidad: "no"},
   {id: 011, nombre: "Red Bull C14 ", precio: 3500, disponibilidad: "si"},
   {id: 012, nombre: "Renault R25", precio: 3650, disponibilidad: "si"},
+]; 
 
-];
-
-// variable para el carrito
+// // variable para el carrito
 let carrito = [];
 
-//obetener datos de todos los botones de los productos
-const botones = document.querySelectorAll("#boton");
 
 
-// Agregar un evento de clic a cada botón
-for (var i = 0; i < botones.length; i++) {
-  botones[i].addEventListener("click", function() {
-    // Obtener el objeto de producto correspondiente
-    var idProducto = this.getAttribute("data-id");
-    var producto = coches.find(function(item) {
-      return item.id === idProducto;
-    });
-
-    // Agregar el producto al carrito
-    agregarProductoAlCarrito(producto);
-  });
-}
