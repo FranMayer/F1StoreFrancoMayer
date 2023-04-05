@@ -1,4 +1,4 @@
-  const coches = [
+const coches = [
 
   {id: 001, nombre: "Footwork FA16", precio: 2750, disponibilidad: "no"},
   {id: 002, nombre: "Bennetton B139", precio: 2800, disponibilidad: "si"},
@@ -14,8 +14,17 @@
   {id: 012, nombre: "Renault R25", precio: 3650, disponibilidad: "si"},
 ]; 
 
-// // variable para el carrito
-let carrito = [];
+//Variable para el carrito 
+const carrito = [];
+
+function agregarProductoAlCarrito(evento) {
+  const idProducto = evento.target.dataset.id;
+  const producto = coches.find(producto => producto.id === idProducto);
+  carrito.push(producto);
+}
+
+const botones = document.getElementById("boton");
+botones.addEventListener("click", agregarProductoAlCarrito);
 
 
 

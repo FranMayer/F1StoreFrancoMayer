@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
-
     <link rel="stylesheet" href="css/main.css" type="text/css">
 
 
@@ -181,7 +180,7 @@
                                 <span class="text">Añadir al carrito</span><span>Red Bull C14</span>
                         </button>
                     </div>
-</div>
+            </div>
             </div>
 
             <div class="card-main">
@@ -198,7 +197,6 @@
         </article>
 
 </section>
-<!-- HTML !-->
 
 <div class="button-container boton-final">
     <div class="container-local">    
@@ -208,6 +206,33 @@
     </div>
 </div>
 
+
+<!--offcanvas-->
+<div class="canvascontainer">
+<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+    Ir al carrito
+    </button>
+
+<div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="staticBackdropLabel">F1 Store - Carrito de compras</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+    <div class="offcanvas-body">
+        <!--aqui va una card dinamica con js-->
+        <div class="canvas">
+            <p>Nombre del coche</p>
+            <p>Precio: $0000</p>
+            <p>ID: 000</p>
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 <script defer src="./js/main.js"></script>
 <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
 </body>
