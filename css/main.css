@@ -68,6 +68,14 @@ a:hover {
     margin-top: 50px;
 }
 
+.precio {
+    text-align: center;
+}
+
+.navbar-toggler {
+    background-color: white;
+    text-align: center;
+}
 
 
 /* CSS */
