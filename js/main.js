@@ -14,13 +14,14 @@ const productos = [
 ];
 
 //Variable para el carrito 
-const carrito = [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 function agregarProductoAlCarrito(evento) {
   if (evento) {
     const idProducto = evento.target.dataset.id;
     const producto = productos.find(producto => producto.id === idProducto);
     carrito.push(producto);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
     const nuevoElemento = crearElementoEnMenu(producto);
     document.getElementById("menu").appendChild(nuevoElemento);
   }
@@ -51,7 +52,19 @@ function crearElementoEnMenu(coche) {
   return nuevoElemento;
 }
 
+function actualizarCarrito() {
+  const carritoLocalStorage = JSON.parse(localStorage.getItem("carrito")) || [];
+  carrito = carritoLocalStorage;
+  // Limpia el carrito actual en el DOM
+  document.getElementById("menu").innerHTML = "";
+  // Vuelve a crear cada elemento en el carrito
+  carrito.forEach(producto => {
+    const nuevoElemento = crearElementoEnMenu(producto);
+    document.getElementById("menu").appendChild(nuevoElemento);
+  });
+}
 
+actualizarCarrito();
 
 
 

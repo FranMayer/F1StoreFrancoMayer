@@ -197,11 +197,6 @@ label {
 .CVV, #card-number-field {
     display: inline-block;
 }
-
-#cvv {
-    max-length: 3;
-}
-
 .payment {
     display: flex;
     flex-direction: column;
@@ -247,5 +242,5 @@ label {
 
 .btn-inicio {
     margin-top: 40px;
-    
+
 }
