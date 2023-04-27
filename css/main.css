@@ -1,15 +1,20 @@
 /*HEADER CSS*/
 
+
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+
+
+
 :root {
 --primary-color : #14141c;
 --secondary-color: #E0DCB4;
 --details-color: #937BB3;
 }
 
-@font-face {
+/* @font-face {
     font-family: miFuenteAdd;
-    src: url(../multimedia/Formula1-regular_web_0.ttf);
-}
+    src: url(../multimedia/Formula1-Regular_web_0.ttf);
+} */
 
 * {
     margin: 0;
@@ -19,7 +24,7 @@
 
 body {
     background-color: var(--primary-color);
-    font-family: miFuenteAdd;
+    font-family: 'Bruno Ace', cursive;
 }
 
 .logo-img {
