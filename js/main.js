@@ -24,8 +24,22 @@ function agregarProductoAlCarrito(evento) {
     localStorage.setItem("carrito", JSON.stringify(carrito));
     const nuevoElemento = crearElementoEnMenu(producto);
     document.getElementById("menu").appendChild(nuevoElemento);
+
+    // Llamar a la función "agregado" para mostrar la alerta
+    agregado();
   }
 }
+
+function agregado() {
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Modelo agregado con exito',
+    showConfirmButton: false,
+    timer: 1200
+  })
+}
+
 
 const botones = document.querySelectorAll(".boton");
 botones.forEach(boton => {
