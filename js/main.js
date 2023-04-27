@@ -35,37 +35,72 @@ botones.forEach(boton => {
 function crearElementoEnMenu(coche) {
   const nuevoElemento = document.createElement("div");
   nuevoElemento.classList.add("canvas");
-  
+  nuevoElemento.dataset.id = coche.id;
+
   const nombreCoche = document.createElement("p");
   nombreCoche.textContent = coche.nombre;
-  
+
   const precioCoche = document.createElement("p");
   precioCoche.textContent = `Precio: $${coche.precio}`;
-  
+
   const idCoche = document.createElement("p");
   idCoche.textContent = `ID: ${coche.id}`;
+
+  const botonEliminar = document.createElement("button");
+  botonEliminar.textContent = "Eliminar";
+  botonEliminar.addEventListener("click", deleteProduct);
+
+  const iconoEliminar = createDeleteIcon();
+  botonEliminar.appendChild(iconoEliminar);
 
   nuevoElemento.appendChild(nombreCoche);
   nuevoElemento.appendChild(precioCoche);
   nuevoElemento.appendChild(idCoche);
-  
+  nuevoElemento.appendChild(botonEliminar);
+
   return nuevoElemento;
 }
 
-function actualizarCarrito() {
-  const carritoLocalStorage = JSON.parse(localStorage.getItem("carrito")) || [];
-  carrito = carritoLocalStorage;
-  // Limpia el carrito actual en el DOM
-  document.getElementById("menu").innerHTML = "";
-  // Vuelve a crear cada elemento en el carrito
-  carrito.forEach(producto => {
-    const nuevoElemento = crearElementoEnMenu(producto);
-    document.getElementById("menu").appendChild(nuevoElemento);
-  });
+
+function createDeleteIcon() {
+  const i = document.createElement("i");
+  i.classList.add("fas", "fa-trash-alt", "trashIcon", "icon");
+  i.addEventListener("click", deleteProduct);
+  return i;
 }
 
+function deleteProduct(event) {
+  const parent = event.target.parentElement;
+  parent.remove();
+
+  const idProducto = parent.dataset.id;
+  eliminarProductoDelCarrito(idProducto);
+}
+
+
+async function actualizarCarrito() {
+  try {
+    const response = await fetch('productos.json');
+    if (!response.ok) {
+      throw new Error('Error al obtener los productos');
+    }
+    const productos = await response.json();
+    carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    document.getElementById("menu").innerHTML = "";
+
+    // Vuelve a crear cada elemento en el carrito
+    carrito.forEach((producto) => {
+      const productoEncontrado = productos.find((p) => p.id === producto.id);
+      if (productoEncontrado) {
+        const nuevoElemento = crearElementoEnMenu(productoEncontrado);
+        document.getElementById("menu").appendChild(nuevoElemento);
+      }
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+
 actualizarCarrito();
-
-
-
-
