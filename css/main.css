@@ -6,6 +6,11 @@
 --details-color: #937BB3;
 }
 
+@font-face {
+    font-family: miFuenteAdd;
+    src: url(../multimedia/Formula1-regular_web_0.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
