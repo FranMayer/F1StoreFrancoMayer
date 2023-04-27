@@ -161,6 +161,17 @@ a {
     color: #14141c;
 }
 
+.title-index {
+    text-align: center;
+    color: #E0DCB4;
+    margin-top: 30px;
+}
+
+.presentacion-index {
+    text-align: center;
+    color: #E0DCB4;
+}
+
 /*canvas*/
 
 .canvascontainer {
@@ -250,5 +261,49 @@ label {
 
 .btn-inicio {
     margin-top: 40px;
+}
 
+/*Ubicacion CSS*/
+
+.ubicacion-title {
+    text-align: center;
+    color: #E0DCB4;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+.ubicacion-parrafo {
+    text-align: center;
+    color: #E0DCB4;
+    margin-bottom: 40px;
+}
+
+.multimedia-ubicacion {
+    display: flex;
+    justify-content: center;
+
+}
+
+.imagen-ubicacion {
+    margin-left: 10px;
+    width: 40%;
+    height: auto;
+}
+
+.footer-ubicacion {
+    margin-top: 50px;
+    border-top: 2px solid #937BB3;
+    padding-top: 15px;
+    margin-left: 20px;
+    color: #E0DCB4;
+    font-size: 20px;
+}
+
+.text-footer {
+    text-align: center;
+}
+
+.accordion {
+    margin-top: 45px;
+    margin: 0 auto; 
 }
